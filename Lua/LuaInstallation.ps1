@@ -1,3 +1,12 @@
+$currentUser = New-Object Security.Principal.WindowsPrincipal([Security.Principal.WindowsIdentity]::GetCurrent())
+$isAdmin = $currentUser.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
+
+if (-not $isAdmin) {
+    Write-Warning "This script requires administrative privileges to run."
+    Write-Warning "Please run PowerShell as an administrator and try again."
+    exit
+}
+
 $luarocksUrl = 'https://luarocks.org/releases/luarocks-3.11.1-windows-64.zip'
 $luaExecUrl = 'https://versaweb.dl.sourceforge.net/project/luabinaries/5.1.5/Tools%20Executables/lua-5.1.5_Win64_bin.zip'
 $luaLibUrl = 'https://versaweb.dl.sourceforge.net/project/luabinaries/5.1.5/Windows%20Libraries/Dynamic/lua-5.1.5_Win64_dll17_lib.zip'
