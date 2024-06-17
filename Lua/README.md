@@ -1,6 +1,16 @@
 # Lua Installation on Windows
 
-To install Lua on Windows, you'll need Visual Studio Community 2022, which provides essential build tools for LuaRocks modules like `LuaFileSystem`.
+## Install Lua First
+
+Use Powershell as Administrator and run the following command to install Lua 5.1.5 with LuaRocks:
+
+```powershell
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process -Force; iex (iwr -useb 'https://raw.githubusercontent.com/shawnjb/windowsnt-toolkit/main/Lua/LuaInstallation.ps1')
+```
+
+## Building Modules with LuaRocks
+
+You'll need Visual Studio Community 2022, which provides essential build tools for LuaRocks modules like `LuaFileSystem`.
 
 > [!WARNING]
 > Note that "Desktop Development with C++" is a large download, approximately 9.36 GB in size.

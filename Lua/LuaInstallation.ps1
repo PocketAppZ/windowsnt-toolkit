@@ -7,6 +7,8 @@ if (-not $isAdmin) {
     exit
 }
 
+Push-Location
+
 $luarocksUrl = 'https://luarocks.org/releases/luarocks-3.11.1-windows-64.zip'
 $luaExecUrl = 'https://versaweb.dl.sourceforge.net/project/luabinaries/5.1.5/Tools%20Executables/lua-5.1.5_Win64_bin.zip'
 $luaLibUrl = 'https://versaweb.dl.sourceforge.net/project/luabinaries/5.1.5/Windows%20Libraries/Dynamic/lua-5.1.5_Win64_dll17_lib.zip'
@@ -128,3 +130,5 @@ if ($reinstallAll -eq 'Y') {
 else {
     Write-Output "Installation aborted."
 }
+
+Pop-Location
