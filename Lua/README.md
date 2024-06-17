@@ -33,6 +33,6 @@ shutdown /r /f /t 0
 
     - This command prompt provides necessary build tools for installing libraries such as `LuaFileSystem`.
 
-6. You can now proceed with installing LuaRocks modules. For example, use `luarocks install luafilesystem` to install `LuaFileSystem`, including any required building tools. Note that some LuaRocks libraries may depend on third-party modules and libraries which you might need to include in your system's PATH separately from LuaRocks.
+6. You can now proceed with installing LuaRocks modules. For example, use `luarocks install luafilesystem` to install `LuaFileSystem`, including any required building tools. Note that some LuaRocks libraries may depend on third-party modules and libraries which you might need to include in your system's environment variables separately from LuaRocks.
 
 ![example-2](image.png)
